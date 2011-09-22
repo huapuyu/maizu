@@ -1,0 +1,34 @@
+@CHARSET "UTF-8";
+
+.daohang a {
+	margin-right: 10px
+}
+
+.text3 {
+	width: 45px;
+	height: 17px;
+	text-align: center;
+	padding-top: 3px;
+	border: 1px solid #7F9DB9;
+	margin-right: 4px;
+	vertical-align: middle
+}
+
+.breadcrumb {
+	color: green;
+	font-size: 20px
+}
+
+.navigator a {
+	padding: 20px
+}
+
+.navigator fieldset {
+	padding: 20px;
+	margin: 40px
+}
+
+.navigator fieldset legend {
+	color: red;
+	font-size: 20px
+}

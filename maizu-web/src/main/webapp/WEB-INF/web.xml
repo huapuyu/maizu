@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://java.sun.com/xml/ns/j2ee" xmlns:javaee="http://java.sun.com/xml/ns/javaee" xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd" version="2.4">
+  <javaee:display-name>Maizu</javaee:display-name>
+  <context-param>
+    <javaee:param-name>contextConfigLocation</javaee:param-name>
+    <javaee:param-value>classpath*:spring.xml</javaee:param-value>
+  </context-param>
+  <servlet>
+    <servlet-name>JspSupportServlet</servlet-name>
+    <servlet-class>org.apache.struts2.views.JspSupportServlet</servlet-class>
+    <load-on-startup>1</load-on-startup>
+  </servlet>
+  <filter>
+    <filter-name>struts2</filter-name>
+    <filter-class>org.apache.struts2.dispatcher.ng.filter.StrutsPrepareAndExecuteFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>struts2</filter-name>
+    <url-pattern>*.html</url-pattern>
+    <dispatcher>REQUEST</dispatcher>
+    <dispatcher>FORWARD</dispatcher>
+  </filter-mapping>
+  <listener>
+    <javaee:listener-class>org.springframework.web.context.ContextLoaderListener</javaee:listener-class>
+  </listener>
+  <session-config>
+    <session-timeout>30</session-timeout>
+  </session-config>
+  <welcome-file-list>
+    <welcome-file>index.jsp</welcome-file>
+  </welcome-file-list>
+</web-app>

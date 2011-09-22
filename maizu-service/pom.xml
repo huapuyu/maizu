@@ -1,0 +1,50 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<parent>
+		<artifactId>maizu</artifactId>
+		<groupId>com.anders</groupId>
+		<version>0.0.1-SNAPSHOT</version>
+		<relativePath>../pom.xml</relativePath>
+	</parent>
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>com.anders</groupId>
+	<artifactId>maizu-service</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>maizu-service</name>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<dependencies>
+		<dependency>
+			<groupId>commons-beanutils</groupId>
+			<artifactId>commons-beanutils</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javax.transaction</groupId>
+			<artifactId>jta</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>javassist</groupId>
+			<artifactId>javassist</artifactId>
+		</dependency>
+		
+		<!-- maizu -->
+		<dependency>
+			<groupId>com.anders</groupId>
+			<artifactId>maizu-api</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.anders</groupId>
+			<artifactId>maizu-dao</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>com.anders</groupId>
+			<artifactId>maizu-model</artifactId>
+		</dependency>
+	</dependencies>
+</project>
