@@ -14,7 +14,7 @@ import javax.persistence.Table;
 /**
  * 配套设施
  * 
- * @author Anders
+ * @author Anders Zhu
  * 
  */
 @Entity
