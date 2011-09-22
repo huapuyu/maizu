@@ -19,7 +19,7 @@ import javax.persistence.Table;
 /**
  * 区域配置
  * 
- * @author Anders
+ * @author Anders Zhu
  * 
  */
 @Entity
