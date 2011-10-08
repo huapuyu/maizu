@@ -23,6 +23,8 @@
 		<spring.version>3.0.6.RELEASE</spring.version>
 		<hibernate.version>3.6.7.Final</hibernate.version>
 		<slf4j.version>1.6.2</slf4j.version>
+		<mybatis.version>3.0.5</mybatis.version>
+		<mybatis.spring.version>1.0.1</mybatis.spring.version>
 	</properties>
 
 	<organization>
@@ -54,6 +56,11 @@
 			<artifactId>spring-web</artifactId>
 			<version>${spring.version}</version>
 		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>		
 		<dependency>
 			<groupId>org.springframework</groupId>
 			<artifactId>spring-test</artifactId>
@@ -134,6 +141,18 @@
 				<artifactId>hibernate-jpa-2.0-api</artifactId>
 				<version>1.0.1.Final</version>
 			</dependency>
+			
+			<!-- mybatis -->
+			<dependency>
+				<groupId>org.mybatis</groupId>
+				<artifactId>mybatis</artifactId>
+				<version>${mybatis.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.mybatis</groupId>
+				<artifactId>mybatis-spring</artifactId>
+				<version>${mybatis.spring.version</version>
+			</dependency>
 
 			<!-- slf4j -->
 			<dependency>
@@ -202,7 +221,19 @@
 			</dependency>
 		</dependencies>
 	</dependencyManagement>
+	
 	<build>
 		<defaultGoal>clean install</defaultGoal>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.3.2</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+		</plugins>
 	</build>
 </project>
