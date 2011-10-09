@@ -1,0 +1,13 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+<struts>
+	<package name="rent" namespace="/rent" extends="struts-default">
+		<action name="rentToPage" class="com.anders.maizu.action.rent.RentHouseAction" method="onLoad">
+			<result name="success" type="freemarker">/WEB-INF/ftl/rent/renthouse.html</result>
+		</action>
+		<action name="createRentInfo" class="com.anders.maizu.action.rent.RentHouseAction" method="submitCreate">
+			<result name="success" type="freemarker">/WEB-INF/ftl/rent/renthouselist.html</result>
+		</action>
+	</package>
+</struts>
